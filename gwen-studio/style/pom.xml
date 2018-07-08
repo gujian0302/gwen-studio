@@ -85,6 +85,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <finalName>${artifactId}</finalName>
+                    <executable>true</executable>
                 </configuration>
             </plugin>
         </plugins>
