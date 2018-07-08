@@ -4,9 +4,14 @@
   "description": "THIS IS GWEN STUDIO'S ADMINISTRATOR ENDPOINT ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --reporter spec",
     "start": "electron ./src/main.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "node-fetch": "^2.1.2"
+  }
 }

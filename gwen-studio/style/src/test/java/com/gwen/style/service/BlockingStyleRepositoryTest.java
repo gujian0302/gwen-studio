@@ -1,6 +1,7 @@
 package com.gwen.style.service;
 
 import com.gwen.style.entity.StyleDO;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 @ImportAutoConfiguration(classes =StyleServiceTest.StyleServiceConfiguration.class )
 public class BlockingStyleRepositoryTest {
 
@@ -29,6 +31,7 @@ public class BlockingStyleRepositoryTest {
 
         List<StyleDO> lists =  blockingStyleRepository.listAll();
 
+        log.info("styles:{}", lists);
         assertEquals(1, lists.size());
     }
 }

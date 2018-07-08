@@ -24,7 +24,7 @@ import javax.persistence.*;
 public class StyleDO {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "ID")
     private Long id;
 
