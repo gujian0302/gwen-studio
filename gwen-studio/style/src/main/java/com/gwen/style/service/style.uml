@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="211.0" y="325.0">com.gwen.style.service.StyleSaveDTO</node>
+    <node x="0.0" y="163.0">com.gwen.style.service.IStyle</node>
+    <node x="0.0" y="325.0">com.gwen.style.service.StyleUpdateDTO</node>
+    <node x="0.0" y="0.0">com.gwen.style.service.BlockingStyleRepository</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="908.5" y="576.5" />
+  <SelectedNodes>
+    <node>com.gwen.style.service.BlockingStyleRepository</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
