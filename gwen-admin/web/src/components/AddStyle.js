@@ -1,6 +1,8 @@
 import * as React from 'react';
-
 import { Form, Icon, Input, Button, InputNumber } from 'antd';
+
+import styles from './style.less';
+import { saveStyle } from '../services/style';
 
 const FormItem = Form.Item;
 
@@ -11,14 +13,22 @@ export default class AddStyle extends React.Component {
 		super(props);
 	}
 
-  submit(){
+  handleSubmit=(e)=>{
+  	e.preventDefault();
 
+  	this.props.form.validateFields((err, values)=>{
+  		if(!err) {
+  			saveStyle(values)
+  			  .then(() => this.props.form.resetFields())
+  			  .then(() => this.props.success());
+  		}
+  	})
   }
 
 	render(){
 		const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched} = this.props.form;
 		return (
-			<Form onSubmit={this.submit}>
+			<Form onSubmit={this.handleSubmit} className={styles.form}>
 			  <FormItem>
 			    {getFieldDecorator('name', {
 			    	rules: [{required: true, message: '名称必须输入'}]
@@ -30,13 +40,15 @@ export default class AddStyle extends React.Component {
 			  <FormItem>
 			    {
 			    	getFieldDecorator('ordinate', {
-			    		rules: [{required: true, message: '排序'}]
+			    		rules: [{required: true, message: '排序必须输入'}]
 			    	})(
 			    	  <InputNumber />
 			    	)
 			    }
 			  </FormItem>
-			</Form>
+			  <Button type="primary" htmlType="submit" onClick={this.handleSubmit} >保存</Button>
+		</Form>
 			);
 	}
 }
+

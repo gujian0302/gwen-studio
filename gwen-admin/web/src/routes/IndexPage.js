@@ -50,7 +50,6 @@ class IndexPage extends React.Component {
           <Header style={{background: '#fff', padding:0}} />
           <Content style={{margin: '0 16px'}}>
             <Style />
-            <AddStyle />
           </Content>
           <Footer style={{ textAlign: 'center'}}>
           </Footer>
